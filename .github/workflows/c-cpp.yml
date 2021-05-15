@@ -17,10 +17,9 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip setuptools
         python3 -m pip install norminette
-    - name: norminette
-        run: norminette  *.c *.h
-
-jobs:
+    - name: Norminette
+      run: norminette  *.c *.h
+  
   build:
 
     runs-on: macos-latest
@@ -31,7 +30,7 @@ jobs:
       run: ./configure
     - name: make
       run: make
-    -name: PFT
+    - name: PFT_2019
       run: |
           git clone https://github.com/gavinfielder/pft.git pft_2019 && echo "pft_2019/" >> .gitignore && cd pft_2019 && rm unit_tests.c && rm options-config.ini && git clone https://github.com/cclaude42/PFT_2019.git temp && cp temp/unit_tests.c . && cp temp/options-config.ini . && rm -rf temp
           make re
