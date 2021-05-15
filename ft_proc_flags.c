@@ -6,7 +6,7 @@
 /*   By: srakuma <srakuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 18:21:29 by srakuma           #+#    #+#             */
-/*   Updated: 2021/05/14 21:19:52 by srakuma          ###   ########.fr       */
+/*   Updated: 2021/05/16 00:45:23 by srakuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_proc_char_field(t_format *f_spec, char obj, int len, char ch)
 	}
 	return (str);
 }
+
 char	*ft_tailgate(t_format *f_spec, char *str, int diff)
 {
 	char	*tmp;
