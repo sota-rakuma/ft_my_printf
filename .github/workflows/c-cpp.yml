@@ -8,8 +8,10 @@ on:
 
 jobs:
   name: norminette
-  runs-on: macos-latest
-  steps:
+  
+    runs-on: macos-latest
+    
+    steps:
     - uses: actions/setup-python@v2
       with:
         python-version: 3.7
@@ -18,20 +20,17 @@ jobs:
         python3 -m pip install --upgrade pip setuptools
         python3 -m pip install norminette
     - name: norminette
-        run: norminette  *.c *.h
+      run: norminette  *.c *.h
 
-jobs:
   build:
 
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
     - name: make
       run: make
-    -name: PFT
+    - name: PFT
       run: |
           git clone https://github.com/gavinfielder/pft.git pft_2019 && echo "pft_2019/" >> .gitignore && cd pft_2019 && rm unit_tests.c && rm options-config.ini && git clone https://github.com/cclaude42/PFT_2019.git temp && cp temp/unit_tests.c . && cp temp/options-config.ini . && rm -rf temp
           make re
