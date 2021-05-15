@@ -9,16 +9,16 @@ on:
 jobs:
   Norminette:
   
-  runs-on: macos-latest
+    runs-on: macos-latest
   
-  steps:
+    steps:
     - uses: actions/setup-python@v2
       with:
         python-version: 3.7
     - name: Install
       run: |
-        python3 -m pip install --upgrade pip setuptools
-        python3 -m pip install norminette
+          python3 -m pip install --upgrade pip setuptools
+          python3 -m pip install norminette
     - name: norminette
       run: norminette  *.c *.h
   
