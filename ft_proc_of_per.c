@@ -6,7 +6,7 @@
 /*   By: srakuma <srakuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 17:11:23 by srakuma           #+#    #+#             */
-/*   Updated: 2021/05/14 21:21:42 by srakuma          ###   ########.fr       */
+/*   Updated: 2021/05/16 00:17:14 by srakuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 static void	ft_init_t_fmt(t_format *f_spec)
 {
 	int			i;
-	int			j;
+	//int			j;
 
 	i = -1;
 	while (++i < 5)
 		f_spec->flag[i] = 0;
 	f_spec->width = 0;
 	f_spec->prcn = -1;
-	j = -1;
+	/*j = -1;
 	while (++j < 9)
-		f_spec->specifier[j] = 0;
+		f_spec->specifier[j] = 0;*/
 }
 
 static int	ft_get_num_in_fmt(const char **fmt, va_list ap, t_format *f_spec)
