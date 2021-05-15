@@ -1,0 +1,35 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ ft_printf_test ]
+  pull_request:
+    branches: [ ft_printf_test ]
+
+jobs:
+  name: norminette
+  runs-on: macos-latest
+  steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install
+      run: |
+        python3 -m pip install --upgrade pip setuptools
+        python3 -m pip install norminette
+    - name: norminette
+        run: norminette  *.c *.h
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+
+      run: make distcheck
