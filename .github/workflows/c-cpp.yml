@@ -7,8 +7,10 @@ on:
     branches: [ master ]
 
 jobs:
-  name: norminette
+  Norminette:
+  
   runs-on: macos-latest
+  
   steps:
     - uses: actions/setup-python@v2
       with:
@@ -17,7 +19,7 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip setuptools
         python3 -m pip install norminette
-    - name: Norminette
+    - name: norminette
       run: norminette  *.c *.h
   
   build:
