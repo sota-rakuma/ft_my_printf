@@ -6,13 +6,16 @@ REG_SRCS =	ft_printf.c \
 			ft_printf_utils.c\
 			ft_proc_precision.c\
 			ft_proc_flags.c\
-			ft_transision_of_integer.c
+			ft_transition_of_integer.c
 BONUS_SRCS = ft_printf_bonus.c \
 			ft_proc_of_per_bonus.c\
 			ft_printf_utils_bonus.c\
 			ft_proc_precision_bonus.c\
-			ft_proc_flags_bonus.c\
-			ft_transision_of_integer_bonus.c
+			ft_tailgate_bonus.c\
+			ft_transition_of_integer_bonus.c\
+			ft_transition_of_long_bonus.c\
+			ft_proc_specifier_bonus.c\
+			ft_transition_n.c
 REG_OBJS = $(REG_SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 DEPS = $(REG_SRCS:.c=.d) $(BONUS_SRCS:.c=.d)
